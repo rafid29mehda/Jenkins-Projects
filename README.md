@@ -7,13 +7,13 @@ Running Jenkins in a Docker container and creating a Jenkinsfile for a complete 
 1. Pull the Jenkins Docker image:
 
    ```bash
-   docker pull jenkins/jenkins:lts
+   docker pull jenkins/jenkins:lts-jdk11
    ```
 
 2. Run Jenkins as a Docker container:
 
    ```bash
-   docker run -d -p 8080:8080 -p 50000:50000 --name jenkins -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+   docker run -d -p 8080:8080 -p 50000:50000 --name jenkins -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
    ```
 
    This command runs Jenkins in detached mode (`-d`), maps host ports to container ports (`-p`), sets the container name, and uses a volume (`-v`) to persist Jenkins data.
